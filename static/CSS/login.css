@@ -1,0 +1,166 @@
+/* body{
+	background: #9AA1BD;
+}
+
+::placeholder{
+	color: #C6B1BE;
+	padding-left: 15px;
+	border-color:#93999C;
+}
+
+
+.a{
+	margin-left: 560px;
+	margin-top: 175px;
+	height: 400px;
+	width: 400px;
+	background: #E0ECE2;
+	border-radius: 5%;
+}
+
+.b{
+	border-radius: 50%;
+	height: 120px;
+	width: 140px;
+	margin-left: 128px;
+	margin-top: -50px;
+}
+
+.c{
+	text-align: center;
+	color: #121313;
+}
+
+.d{
+	width: 85%;
+	height: 40px;
+	margin-left: 25px;
+
+}
+
+.e{
+	margin-left: 29px;
+	width: 85%;
+	height: 40px;
+	background: #378EA9;
+	color: #8DC3CB;
+	border-radius: 5%;
+}
+
+.f{
+	color: #FFFFFF;
+	margin-left: 25px;
+}
+
+.g{
+	margin-left: 47px;
+	margin-top: -20px;
+	color: #176A4C;
+}
+
+
+.h{
+	margin-left: 250px;
+	margin-top: -33px;
+	color: #176A4C;
+}
+
+body { background-image: url('Sky-blue-background.jpg');} */
+
+
+*{
+    margin: 0px;
+}
+
+.outer{
+
+    /* border: 3px solid black; */
+    /* overflow: auto; */
+    width: 80%;
+    display: block;
+    margin: 85px auto;
+}
+.container{
+    
+    /* border: 3px solid black; */
+    padding : 5px;
+    margin : 10px;
+    display: inline-block;
+    width: 40%;
+    /* float: inline-start; */
+    height: 20em;
+    margin-top: 83px;
+}
+
+#logo{
+    height: 20em;
+    margin-top: 63px;
+    background-image: url('../logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-right: 40px;
+}
+#logo h3{
+    margin-top: 189px;
+    font-size: 40px;
+    color: rgb(176, 1, 1);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input, #lbtn, #cna{
+    display: block;
+    margin: 10px auto;
+    width: 350px;
+    padding: 7px 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+form{
+    margin-top: 20px;
+}
+#lbtn, #cna{
+    cursor: pointer;
+
+}
+#lbtn:hover{
+    background-color: rgb(218, 216, 216);
+}
+#cna{
+    background-color: rgb(172, 172, 172);
+}
+#cna:hover{
+    background-color: rgb(149, 149, 149);
+}
+.newacc{ 
+    display: block;
+    width : 70%;
+    margin: 20px auto;
+    border-top: 2px crimson solid;
+}
+#login h2{
+    text-align: center;
+    color: rgb(176, 1, 1);
+    font-size: 50px;
+}
+footer{
+
+    background-color: black;
+    text-align: center;
+    color: rgb(155, 158, 160);
+    height: 80px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-top: 30px;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(155, 158, 160);;
+}
+#CreateAcc{
+    text-decoration: none;
+    padding: 2px;
+    color: black;
+}
