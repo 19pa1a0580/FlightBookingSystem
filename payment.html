@@ -1,0 +1,332 @@
+<html>
+
+<head>
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: Copperplate Gothic;
+            background: url(https://wallpaperaccess.com/full/459817.jpg)no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        select {
+            width: 400px;
+
+            border-radius: 10px;
+            border-block-start-width: 3px;
+            border-width: 3px;
+            padding: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 1px 1px #efefef;
+            appearance: none;
+            background: #fffbfb url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskNE0dB7cfSMM5yM0PPZiexQGIMVfJlMzpcEgfXHZ7cTkgQOb&s) no-repeat;
+            background-position: 95% 55%;
+            background-size: 22px;
+            position: relative;
+            left: -5%;
+            top: -20px;
+            color: rgba(255, 255, 255, 0.711);
+
+
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 70px 0px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .menu,
+        .content {
+            width: 100%;
+        }
+
+        .content {
+            margin: 30px 0;
+        }
+
+        .content .data {
+            padding: 20px;
+            background-color: rgba(165, 164, 164, 0.404);
+            border: 2px solid #d826ba;
+            border-radius: 8px;
+            width: 700px;
+            position: relative;
+            left: 25%;
+            top: -100px;
+
+        }
+
+        .data {
+            display: none;
+        }
+        img{
+            display: none;
+        }
+
+        td {
+            align-items: center;
+            padding: 6px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#select").on('change', function () {
+                $(".data").hide();
+                $("#" + $(this).val()).fadeIn(800);
+
+            }).change();
+        });
+    </script>
+   
+</head>
+
+<body background="">
+   
+    <table>
+        <tr>
+            <th width="1904px">
+                <h1 style="color:rgb(199, 195, 195);font-size:50px;text-align:center;">Payment</h1>
+            </th>
+            <th align="right"><img src="LOGO.png" style="height: 100px;width:150px ; "></th>
+        </tr>
+    </table>
+
+    <h2 style="color:rgb(199, 195, 195);font-size:30px;text-align: center;">Select Payment Method</h2>
+
+    <div class="wrapper">
+        <div class="menu">
+            <select style="color:rgb(10, 10, 10);font-size:30px; text-align: center;" id="select">
+                <option value="0">Select</option>
+                <option value="creditcard">Credit card</option>
+                <option value="debitcard">Debit card</option>
+                <option value="netbanking">Net Banking</option>
+                <option value="upi">Pay Via UPI</option>
+            </select>
+        </div>
+    </div>
+    <div class="content">
+
+
+        <div style="background-color:red;">
+
+
+        </div>
+
+        <div id="creditcard" class="data">
+            <h1>Credit Card</h1>
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Name on the card</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name on the card" placeholder="Name on the card"
+                            style=" width: 600px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px;  box-sizing: border-box;font-size:20px ;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h2>Card Number</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name on the card" placeholder="Card Number"
+                            style=" width: 600px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px;  box-sizing: border-box;font-size:20px ;">
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <h2>Expiry Date</h2>
+                    </td>
+                    <td>
+                        <h2>CVV</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" placeholder="Expiry date (MM/YY)"
+                            style=" width: 300px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;font-size:20px ;">
+                    </td>
+                    <td><input type="password" placeholder="CVV"
+                            style="font-size:20px ; width:300px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px;  box-sizing: border-box;">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Nickname for card</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name on the card" placeholder="Nickname for card"
+                            style="font-size:20px ; width:615px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px;  box-sizing: border-box;">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td align="right" width="400px"><input type="submit" value="Pay" style="border-radius:10px;width:180px;height:40px;background:rgb(221, 25, 25);
+                        transition: all 0.5s;
+                         cursor: pointer;
+                        opacity:0.7;"> </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div id="debitcard" class="data">
+            <h1>Debit Card</h1>
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Name on the card</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name on the card" placeholder="Name on the card"
+                            style=" width: 600px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px;  box-sizing: border-box;font-size:20px ;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h2>Card Number</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name on the card" placeholder="Card Number"
+                            style=" width: 600px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px;  box-sizing: border-box;font-size:20px ;">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Expiry Date</h2>
+                    </td>
+                    <td>
+                        <h2>CVV</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" placeholder="Expiry date (MM/YY)"
+                            style=" width: 300px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;font-size:20px ;">
+                    </td>
+                    <td><input type="password" placeholder="CVV"
+                            style="font-size:20px ; width:300px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px;  box-sizing: border-box;">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Nickname for card</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name on the card" placeholder="Nickname for card"
+                            style="font-size:20px ; width:615px; padding: 12px 12px; display: inline-block; border: 1px solid #ccc; border-radius: 4px;  box-sizing: border-box;">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td align="center" width="500px"><input type="submit" value="Pay" style="border-radius:10px;width:180px;height:40px;background:rgb(221, 25, 25);font-size:25px ;
+                        transition: all 0.5s;
+                         cursor: pointer;
+                        opacity:0.7;"> </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        <div id="netbanking" class="data">
+            <h1>Net Banking</h1>
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Select the Bank</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="search" placeholder="All banks"
+                            style=" width: 500px; padding: 12px 12px; display: inline-block; border: 1px solid#ccc; border-radius: 4px;  box-sizing: border-box;font-size:20px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Account no</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Acc.no"
+                            style=" width: 500px; padding: 12px 12px; display: inline-block; border: 1px solid#ccc; border-radius: 4px;  box-sizing: border-box;font-size:20px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>CVV</h2>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><input type="password" placeholder="CVV"
+                            style=" width: 300px; padding: 12px 12px; display: inline-block; border: 1px solid#ccc; border-radius: 4px;  box-sizing: border-box;font-size:20px">
+                    </td>
+                    <td align="center" width="400px"><input type="submit" value="Pay" style="border-radius:10px;width:180px;height:40px;background:rgb(221, 25, 25);
+                        transition: all 0.5s;
+                         cursor: pointer;
+                        opacity:0.7;"> </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <div id="upi" class="data">
+            <h1>Pay Via UPI</h1>
+            <hr>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h2>Add New UPI</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="example@upi"
+                            style=" width: 300px; padding: 12px 12px; display: inline-block; border: 1px solid#ccc; border-radius: 4px;  box-sizing: border-box;font-size:20px">
+                    </td>
+                    <td align="center" width="400px"><input type="submit" value="Pay" style="border-radius:10px;width:180px;height:40px;background:rgb(221, 25, 25);
+                        transition: all 0.5s;
+                         cursor: pointer;
+                        opacity:0.7;"> </td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+    <marquee direction="right" scrollamount="30"><img src="LOGO.png" id="image"
+            style="height:400px ;width: 500px;; top:800px ;"></marquee>
+ 
+</body>
+
+</html>
